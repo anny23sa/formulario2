@@ -1,12 +1,11 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Registro from './components/Registro/Registro'
+import Registro from './components/Registro/Registro';
 
-
-const App = () => {
+function App () {
   return (
-    <div>
+    <div className="Formulario">
       <h1>Crea una cuenta</h1>
+      <br />
       <Registro />
     </div>
   );
