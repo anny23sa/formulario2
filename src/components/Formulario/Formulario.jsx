@@ -8,41 +8,51 @@ const [nombre, setNombre] = useState("");
 const [email, setEmail] = useState("");
 const [contrasena, setContrasena] = useState("");
 const [confirmacion, SeTConfirmacion] = useState("");
-//const [error, setError] = useState(false)
 
-const handleSubmit = (e) => {
-  e.preventDefault()
-  /*if(nombre.trim()===""){
-  setError(true)
-}else {
-  alert('datos enviados')
-  setError(false)
-}*/
+//Estado para los errores
+const [error, setError] = useState(false);
+//Funcion antes de enviar el formulario
+const validarDatos = (e) => {
+  e.preventDeFault();
+  //Validacion;
+  if (nombre === '' || apellido === '' || edad === '' || email === '') {
+    setError(true);
+    return;
+}
+setError(false);
+        setNombre('');
+        setApellido('');
+        setEdad('');
+        setEmail('');
 }
 
 return(
-  <form onSumit={handleSubmit}>
+  <form className="Formulario" onSubmit={validarDatos}>
+    {error ? <p>Todos los campos son obligatorios</p> : null}
     <div className="form-group">
       <label>Nombre</label>
-      <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+      <input type="text" name="nombre" className="form-control" value={nombre} onChange={(e) => setNombre(e.target.value)} />
     </div>
 
     <div className="form-group">
         <label>Email</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input type="email" name="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
 
       <div className="form-group">
         <label>Contraseña</label>
-        <input type="password" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
+        <input type="password" name="contraseña" className="form-control" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
       </div>
 
       <div className="form-group">
         <label>Confirmar Contraseña</label>
-        <input type="password" value={confirmacion} onChange={(e) => setConfirmacion(e.target.value)} />
+        <input type="password" name="confirmar contraseña" className="form-control" value={confirmacion} onChange={(e) => setConfirmacion(e.target.value)} />
       </div>
-      <button type="submit">Registrarse</button>
+      <br />
+      
+      <button type="submit" className="btn btn-primary w-100">Registrarse</button>
     </form>
+    
   );
 }
 
