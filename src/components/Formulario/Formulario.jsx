@@ -12,12 +12,12 @@ const [confirmacion, SeTConfirmacion] = useState("");
 
 const handleSubmit = (e) => {
   e.preventDefault()
-  if(nombre.trim()===""){
+  /*if(nombre.trim()===""){
   setError(true)
 }else {
   alert('datos enviados')
   setError(false)
-}
+}*/
 }
 
 return(
@@ -36,7 +36,7 @@ return(
         <label>Contraseña</label>
         <input type="password" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
       </div>
-      
+
       <div className="form-group">
         <label>Confirmar Contraseña</label>
         <input type="password" value={confirmacion} onChange={(e) => setConfirmacion(e.target.value)} />

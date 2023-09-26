@@ -3,6 +3,7 @@ import Alert from '../Alert/Alert'
 import Formulario from '../Formulario/Formulario'
 import SocialButton from '../SocialButton/SocialButton'
 
+
 const Registro = () => {
   return (
     <div>
