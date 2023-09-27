@@ -28,7 +28,7 @@ setError(false);
 
 return(
   <form className="Formulario" onSubmit={validarDatos}>
-    {error ? <p>Completa todos los campos</p> : null}
+    {error ? <p>Completa todos los campos !</p> : null}
     <div className="form-group">
       <label>Nombre</label>
       <input type="text" name="nombre" className="form-control" value={nombre} onChange={(e) => setNombre(e.target.value)} />
@@ -46,7 +46,7 @@ return(
 
       <div className="form-group">
         <label>Confirmar Contraseña</label>
-        <input type="password" name="confirmar contraseña" className="form-control" value={confirmacion} onChange={(e) => setConfirmacion(e.target.value)} />
+        <input type="confirmarPassword" name="confirmarPassword" className="form-control" value={confirmacion} onChange={(e) => setConfirmacion(e.target.value)} />
       </div>
       <br />
       
