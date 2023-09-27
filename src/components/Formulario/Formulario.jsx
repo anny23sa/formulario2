@@ -7,7 +7,7 @@ const Formulario = () => {
 const [nombre, setNombre] = useState("");
 const [email, setEmail] = useState("");
 const [contrasena, setContrasena] = useState("");
-const [confirmacion, SeTConfirmacion] = useState("");
+const [confirmacion, setConfirmacion] = useState("");
 
 //Estado para los errores
 const [error, setError] = useState(false);
@@ -15,15 +15,15 @@ const [error, setError] = useState(false);
 const validarDatos = (e) => {
   e.preventDeFault();
   //Validacion;
-  if (nombre === '' || apellido === '' || edad === '' || email === '') {
+  if (nombre === '' || email === '' || contrasena === '' || confirmacion === '') {
     setError(true);
     return;
 }
 setError(false);
         setNombre('');
-        setApellido('');
-        setEdad('');
         setEmail('');
+        setContrasena('');
+        setConfirmacion('');
 }
 
 return(

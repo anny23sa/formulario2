@@ -10,7 +10,6 @@ const Registro = () => {
 
   return (
     <div>
-      <h1>Registro</h1>
       {/* Utiliza SocialButton y pasa el icono como prop */}
       <SocialButton icon="facebook" />
       <SocialButton icon="github" />
