@@ -58,10 +58,7 @@ return(
 
 export default Formulario;
     
- 
-
-
-  /*return (
+ /*return (
     <div className="container">
         <h2>Dime tu nombre</h2>
         {error ? <p className="error">Hay un error</p>: null}

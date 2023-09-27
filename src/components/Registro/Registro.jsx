@@ -14,7 +14,10 @@ const Registro = () => {
       <SocialButton icon="facebook" />
       <SocialButton icon="github" />
       <SocialButton icon="linkedin" />
+      <br />
+      <h5>o usa tu email para registrarte</h5>
       <Formulario />
+      <br />
       <Alert />
     </div>
   );
