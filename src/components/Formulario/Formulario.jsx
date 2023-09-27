@@ -28,7 +28,7 @@ setError(false);
 
 return(
   <form className="Formulario" onSubmit={validarDatos}>
-    {error ? <p>Completa todos los cambios</p> : null}
+    {error ? <p>Completa todos los campos</p> : null}
     <div className="form-group">
       <label>Nombre</label>
       <input type="text" name="nombre" className="form-control" value={nombre} onChange={(e) => setNombre(e.target.value)} />
