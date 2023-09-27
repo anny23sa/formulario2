@@ -10,11 +10,12 @@ const Registro = () => {
 
   return (
     <div>
-      <h1>Registro</h1>
+      
       {/* Utiliza SocialButton y pasa el icono como prop */}
       <SocialButton icon="facebook" />
       <SocialButton icon="github" />
       <SocialButton icon="linkedin" />
+      <p className='email'> O usa tu email para registrarte</p>
       <Formulario />
       <Alert />
     </div>
