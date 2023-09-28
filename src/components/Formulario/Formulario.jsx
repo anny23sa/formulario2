@@ -22,7 +22,7 @@ const Formulario = () => {
       return;
     }
     setError(false);
-    
+
     setNombre('');
     setEmail('');
     setContrasena('');
@@ -31,35 +31,35 @@ const Formulario = () => {
 
   return (
     <div>
-    <form className="Formulario" onSubmit={validarDatos}>
-      {error ? <p>Completa todos los campos !</p> : null}
-      <div className="form-group">
-        <label>Nombre</label>
-        <input type="text" name="nombre" className="form-control" value={nombre} onChange={(e) => setNombre(e.target.value)} />
-      </div>
+      <form className="Formulario" onSubmit={validarDatos}>
+        {error ? <p>Completa todos los campos !</p> : null}
+        <div className="form-group">
+          <label>Nombre</label>
+          <input type="text" name="nombre" className="form-control" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+        </div>
 
-      <div className="form-group">
-        <label>Email</label>
-        <input type="email" name="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
-      </div>
+        <div className="form-group">
+          <label>Email</label>
+          <input type="email" name="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </div>
 
-      <div className="form-group">
-        <label>Contraseña</label>
-        <input type="password" name="contraseña" className="form-control" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
-      </div>
+        <div className="form-group">
+          <label>Contraseña</label>
+          <input type="password" name="contraseña" className="form-control" value={contrasena} onChange={(e) => setContrasena(e.target.value)} />
+        </div>
 
-      <div className="form-group">
-        <label>Confirmar Contraseña</label>
-        <input type="confirmarPassword" name="confirmarPassword" className="form-control" value={confirmacion} onChange={(e) => setConfirmacion(e.target.value)} />
-      </div>
-      <br />
+        <div className="form-group">
+          <label>Confirmar Contraseña</label>
+          <input type="confirmarPassword" name="confirmarPassword" className="form-control" value={confirmacion} onChange={(e) => setConfirmacion(e.target.value)} />
+        </div>
+        <br />
 
-      <button type="submit" className="btn btn-primary w-100">Registrarse</button>
-    </form>
-   <hr />
-    <h1>Datos Ingresados</h1>
-    {nombre} - {email} - {contrasena} - {confirmacion}
-</div>
+        <button type="submit" className="btn btn-primary w-100">Registrarse</button>
+      </form>
+      <hr />
+      <h1>Datos Ingresados</h1>
+      {nombre} - {email} - {contrasena} - {confirmacion}
+    </div>
   );
 };
 
