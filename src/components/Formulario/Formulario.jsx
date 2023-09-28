@@ -13,22 +13,24 @@ const Formulario = () => {
   const [error, setError] = useState(false);
   //Funcion antes de enviar el formulario
   const validarDatos = (e) => {
-    
-    e.preventDeFault();
+    e.preventDefault();
+
     //Validacion;
     if (nombre === '' || email === '' || contrasena === '' || confirmacion === '') {
-      alert("Datos vacios")
+      /*alert("Datos vacios")*/
       setError(true);
       return;
     }
     setError(false);
+    
     setNombre('');
     setEmail('');
     setContrasena('');
     setConfirmacion('');
-  }
+  };
 
   return (
+    <div>
     <form className="Formulario" onSubmit={validarDatos}>
       {error ? <p>Completa todos los campos !</p> : null}
       <div className="form-group">
@@ -54,9 +56,12 @@ const Formulario = () => {
 
       <button type="submit" className="btn btn-primary w-100">Registrarse</button>
     </form>
-
+   <hr />
+    <h1>Datos Ingresados</h1>
+    {nombre} - {email} - {contrasena} - {confirmacion}
+</div>
   );
-}
+};
 
 export default Formulario;
 

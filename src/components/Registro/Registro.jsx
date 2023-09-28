@@ -6,7 +6,6 @@ import Alert from '../Alert/Alert';
 const Registro = () => {
   return (
     <div>
-      {/* Utiliza SocialButton y pasa el icono como prop */}
       <SocialButton icon="facebook" />
       <SocialButton icon="github" />
       <SocialButton icon="linkedin" />
